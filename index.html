@@ -37,33 +37,18 @@
 		<br>
 
 		<h3>Rebuttal (Minor)</h3>
-		<p><b>Reviewer #1:</b> Add examples of larger meshes to show the advantage of parallelized algorithm.
-			<br><b>R:</b> Thanks for your advice. we will make more extensive experiments on high-resolution 3D models (e.g., 100K faces).
+		<p><b>Reviewer #2:</b> The examples of point clouds are too simple.
+			<br><b>A:</b> We shall follow your advice to conduct more challenging experiments. The experimental results will be added in the final version.
 		</p>
-		<p><b>Reviewer #2:</b> The boundary handling can be mentioned. Add more sources of VD usage to back it up. Delaunay triangulations of more complicated shapes. Add paper "Navigating Intrinsic Delaunay Triangulations" as an example of applications of IDT.
-			<br><b>R:</b> Sure. Will do as you suggested. 
+		
+		<p><b>Reviewer #3:</b> I disagree with the statement that the result is tessellation independent since the curve is finally projected onto the input surface, the result will definitely depend on the input.
+			<br><b>A:</b> We partially agree with your comments. As you know, generally the input surface has a specific representation. For example, when the input is a triangle mesh, one hopes to get a path totally lying on the mesh surface. The final projection step you mentioned is just for making the output path have a representation compatible with the surface representation. But when the input is a parametric surface, we don’t need the final projection step any more since the entire optimization process is conducted on the parameter domain. To summarize, we mean that the main body of our algorithm is tessellation independent. 
 		</p>
-		<p><b>Reviewer #2:</b> Why it is “reasonable” to determinate owner-less region simply for Type-#1 CVD cell.
-			<br><b>R:</b> Thanks for your question. We explained this in Q2. The explanation can also be found in [Yan 2014](http://archive.ymsc.tsinghua.edu.cn/pacm_download/38/280-2014_TVCG_LRVD.pdf). We shall clearly state this in the revision.
+		
+		<p><b>Reviewer #4:</b> The output is not "Shortest Path"
+			<br><b>A:</b> Yes, not quite exact. As you observed, the result is not the globally exact shortest path. We follow your advice and will change the statement. 
 		</p>
-		<p><b>Reviewer #2:</b> Figure 1 needs more elaboration. Elaboration on the exactly meaning of optimizing sites.
-			<br><b>R:</b> Thanks. We will proof-read this paper to improve the writing.
-		</p>
-		<p><b>Reviewer #2:</b> What is the min on the color bar of Figure 6?
-			<br><b>R:</b> We use the color bar to visualize the relative error of straight-line distance against geodesic distance: (d_geodesic- d_straight)/d_geodesic, which ranges from 0 to 1. We shall modify “min” to 0, and “max” to 1 in the revision. Thanks.
-		</p>
-		<p><b>Reviewer #3:</b> Usage of the virtual vertex x_i^new is not detailed.
-			<br><b>R:</b> x_i^new is the proxy of x_i to participate the repartition of related owner-less region. We shall clearly state this in the revision. 
-		</p>
-		<p><b>Reviewer #3:</b> Problems in parallel implementation.
-			<br><b>R:</b> We agree that there is a potential to further improve the parallel implementation. We will follow your advice to tune the text and optimize the implementation. 
-		</p>
-		<p><b>Reviewer #4:</b> Explicitly mention the bad effect of inconsistencies in application. Explain the concept of owner-less regions. 
-			<br><b>R:</b> Thanks. We will re-organize the text to clarify/illustrate this. At the same time, we will give out explicit conception of “own-less region” with an intuitive figure.
-		</p>
-		<p><b>Reviewer #4:</b> Why not distinguish type #0 and type #2 CVD cells by check the convexity on projected 2D shape? &amp; Isn't it just enough to partition the projected 2D polygon?
-			<br><b>R:</b> A very good question. Some explanation can be found in Q3. In fact, if a RVD cell is nearly planar, it is no problem to project it onto a plane. But the kidney shaped cells often occur near the edge of a thin shape. I understand what you mean: why not consider the re-partitioning step on the 2D parameterized domain (in fact, projection also leads to a simple parameterization result)? Our response is: a non-isometric parameterization cannot work (to guarantee that RVD is close to GVD), but an as-isometric-as-possible parameterization result is non-trivial to obtain and computationally time-consuming, especially when the local shape is highly curved. 
-		</p>
+		
 	</div>
 </section><!--/Promo Area-->
 
