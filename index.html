@@ -1,10 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
-<title>PG picture(runoob.com)</title>
-</head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>WECHAT_EMPTY_TITLE</title>
+
+<!-- Bootstrap -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+<link href="assets/css/animate.css" rel="stylesheet">
+<link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+
+<!-- Main css -->
+<link href="assets/css/main.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style id="__WXWORK_INNER_SCROLLBAR_CSS">::-webkit-scrollbar { width: 12px !important; height: 12px !important; }::-webkit-scrollbar-track:vertical {  }::-webkit-scrollbar-thumb:vertical { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-scrollbar-track:horizontal {  }::-webkit-scrollbar-thumb:horizontal { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-resizer { display: none !important; }</style></head>
+
 <body>
- <img src="picture/1.jpg"  alt="Figure 1" />
-</body>
-</html>
+
+<!--Promo Area-->
+<section class="promo-area section-padding-2">
+	<div class="container">
+		<center>
+			<img src="picture/1.jpg" alt="">
+			<h4>Fig 1</h4>
+			<br>
+		</center>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3>Rebuttal (Minor)</h3>
+		<p><b>Reviewer #1:</b> Add examples of larger meshes to show the advantage of parallelized algorithm.
+			<br><b>R:</b> Thanks for your advice. we will make more extensive experiments on high-resolution 3D models (e.g., 100K faces).
+		</p>
+		<p><b>Reviewer #2:</b> The boundary handling can be mentioned. Add more sources of VD usage to back it up. Delaunay triangulations of more complicated shapes. Add paper "Navigating Intrinsic Delaunay Triangulations" as an example of applications of IDT.
+			<br><b>R:</b> Sure. Will do as you suggested. 
+		</p>
+		<p><b>Reviewer #2:</b> Why it is “reasonable” to determinate owner-less region simply for Type-#1 CVD cell.
+			<br><b>R:</b> Thanks for your question. We explained this in Q2. The explanation can also be found in [Yan 2014](http://archive.ymsc.tsinghua.edu.cn/pacm_download/38/280-2014_TVCG_LRVD.pdf). We shall clearly state this in the revision.
+		</p>
+		<p><b>Reviewer #2:</b> Figure 1 needs more elaboration. Elaboration on the exactly meaning of optimizing sites.
+			<br><b>R:</b> Thanks. We will proof-read this paper to improve the writing.
+		</p>
+		<p><b>Reviewer #2:</b> What is the min on the color bar of Figure 6?
+			<br><b>R:</b> We use the color bar to visualize the relative error of straight-line distance against geodesic distance: (d_geodesic- d_straight)/d_geodesic, which ranges from 0 to 1. We shall modify “min” to 0, and “max” to 1 in the revision. Thanks.
+		</p>
+		<p><b>Reviewer #3:</b> Usage of the virtual vertex x_i^new is not detailed.
+			<br><b>R:</b> x_i^new is the proxy of x_i to participate the repartition of related owner-less region. We shall clearly state this in the revision. 
+		</p>
+		<p><b>Reviewer #3:</b> Problems in parallel implementation.
+			<br><b>R:</b> We agree that there is a potential to further improve the parallel implementation. We will follow your advice to tune the text and optimize the implementation. 
+		</p>
+		<p><b>Reviewer #4:</b> Explicitly mention the bad effect of inconsistencies in application. Explain the concept of owner-less regions. 
+			<br><b>R:</b> Thanks. We will re-organize the text to clarify/illustrate this. At the same time, we will give out explicit conception of “own-less region” with an intuitive figure.
+		</p>
+		<p><b>Reviewer #4:</b> Why not distinguish type #0 and type #2 CVD cells by check the convexity on projected 2D shape? &amp; Isn't it just enough to partition the projected 2D polygon?
+			<br><b>R:</b> A very good question. Some explanation can be found in Q3. In fact, if a RVD cell is nearly planar, it is no problem to project it onto a plane. But the kidney shaped cells often occur near the edge of a thin shape. I understand what you mean: why not consider the re-partitioning step on the 2D parameterized domain (in fact, projection also leads to a simple parameterization result)? Our response is: a non-isometric parameterization cannot work (to guarantee that RVD is close to GVD), but an as-isometric-as-possible parameterization result is non-trivial to obtain and computationally time-consuming, especially when the local shape is highly curved. 
+		</p>
+	</div>
+</section><!--/Promo Area-->
+
+
+<!--/Footer Area-->
+
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/jquery-migrate.js"></script>
+
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/scrollUp.min.js"></script>
+
+<script src="assets/js/script.js"></script><a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;"><i class="fa fa-angle-up"></i></a>
+
+
+
+</body></html>
